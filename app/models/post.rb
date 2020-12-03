@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :users, through: :comments
   
-  accepts_
+  accepts_nested_attributes_for :user, reject_if: :all_blank
 
   def comments_attributes=(comment_attributes)
     comment_attributes.values.each do |comment_attribute|
