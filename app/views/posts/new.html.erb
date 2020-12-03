@@ -1,6 +1,6 @@
 <%= render 'form', post: Post.new %>
 
-<%= form_for post do |f| %>
+<%= form_for(@post) do |f| %>
   <%= f.label "Title:" %>
   <%= f.text_field :title %> <br>
   <%= f.label "Content:" %>
